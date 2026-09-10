@@ -28,12 +28,12 @@ export default function App() {
       {/* Navigation Bar */}
       <Navbar onOpenResume={() => setIsResumeOpen(true)} />
 
-      {/* Main Flow: HERO → ABOUT → SKILLS → PROJECTS → ACHIEVEMENTS → EDUCATION → DEVELOPER PROFILES → CONTACT */}
+      {/* Main Flow: HERO → PROJECTS → SKILLS → ABOUT → ACHIEVEMENTS → EDUCATION → DEVELOPER PROFILES → CONTACT */}
       <main className="flex-grow">
         <Hero onOpenResume={() => setIsResumeOpen(true)} />
-        <About />
-        <Skills />
         <Projects />
+        <Skills />
+        <About />
         <Achievements />
         <Education />
         <CodingProfiles />

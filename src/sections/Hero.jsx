@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Download, Mail, Terminal, ChevronDown } from 'lucide-react';
+import { ArrowRight, Terminal, ChevronDown } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from '../components/SocialIcons';
 import { portfolioData } from '../data/portfolioData';
 import HeroVisual from '../components/HeroVisual';
@@ -27,19 +27,19 @@ export default function Hero({ onOpenResume }) {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.15,
+        staggerChildren: 0.12,
         delayChildren: 0.1,
       },
     },
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 24 },
+    hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.6,
+        duration: 0.5,
         ease: [0.16, 1, 0.3, 1],
       },
     },
@@ -65,76 +65,91 @@ export default function Hero({ onOpenResume }) {
             animate="visible"
             className="lg:col-span-7 flex flex-col items-start space-y-6"
           >
-            {/* Status Badge */}
-            <motion.div variants={itemVariants}>
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-dark-900/90 border border-emerald-500/30 backdrop-blur-md badge-glow">
-                <span className="relative flex h-2.5 w-2.5">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+            {/* Identity Tag & Status Badge */}
+            <motion.div variants={itemVariants} className="flex flex-wrap items-center gap-3">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/25 backdrop-blur-md">
+                <Terminal className="w-3.5 h-3.5 text-cyan-400" />
+                <span className="text-xs font-mono font-medium text-cyan-300">
+                  {personal.role}
                 </span>
-                <span className="text-xs font-mono font-medium text-emerald-400 tracking-wide">
+              </div>
+
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-dark-900/90 border border-emerald-500/30 backdrop-blur-md">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                </span>
+                <span className="text-xs font-mono font-medium text-emerald-400">
                   {personal.statusBadge}
                 </span>
               </div>
             </motion.div>
 
             {/* Name & Headline */}
-            <motion.div variants={itemVariants} className="space-y-3">
-              <div className="flex items-center gap-2 text-slate-400 font-mono text-sm tracking-widest uppercase">
-                <Terminal className="w-4 h-4 text-accent-cyan" />
-                <span>Hello, World! I am</span>
-              </div>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white font-display leading-[1.1]">
-                <span className="block text-slate-100">{personal.name}</span>
-                <span className="block mt-2 bg-gradient-to-r from-cyan-400 via-teal-300 to-indigo-400 bg-clip-text text-transparent">
-                  AI & Data Science Student
-                </span>
-                <span className="block text-2xl sm:text-3xl lg:text-4xl font-semibold text-slate-300 mt-2 font-sans tracking-normal">
-                  Building Intelligent Digital Solutions.
+            <motion.div variants={itemVariants} className="space-y-2">
+              <span className="text-sm font-mono tracking-wider uppercase text-slate-400">
+                Ruban Raj R
+              </span>
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white font-display leading-[1.15]">
+                <span className="block bg-gradient-to-r from-white via-slate-100 to-slate-300 bg-clip-text text-transparent">
+                  {personal.headline}
                 </span>
               </h1>
             </motion.div>
 
-            {/* Supporting Text */}
+            {/* Supporting Line */}
             <motion.p
               variants={itemVariants}
-              className="text-base sm:text-lg text-slate-300 max-w-2xl leading-relaxed font-normal"
+              className="text-sm sm:text-base text-slate-300 max-w-2xl leading-relaxed font-normal"
             >
               {personal.supportingText}
             </motion.p>
 
-            {/* CTA Buttons */}
+            {/* Hero CTA Buttons */}
             <motion.div
               variants={itemVariants}
-              className="flex flex-wrap items-center gap-4 pt-2 w-full sm:w-auto"
+              className="space-y-3 pt-2 w-full sm:w-auto"
             >
-              <a
-                href="#projects"
-                onClick={handleScrollToProjects}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl bg-gradient-to-r from-cyan-500 to-teal-500 hover:from-cyan-400 hover:to-teal-400 text-slate-950 font-semibold text-sm shadow-lg shadow-cyan-500/25 transition-all duration-300 hover:shadow-cyan-500/40 hover:scale-[1.02] active:scale-[0.98] group cursor-pointer"
-              >
-                <span>View My Work</span>
-                <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1 text-slate-950" />
-              </a>
+              <div className="flex flex-wrap items-center gap-3.5">
+                {/* Primary: View My Work */}
+                <a
+                  href="#projects"
+                  onClick={handleScrollToProjects}
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-gradient-to-r from-cyan-500 to-teal-500 hover:from-cyan-400 hover:to-teal-400 text-slate-950 font-bold text-xs shadow-lg shadow-cyan-500/20 transition-all duration-200 active:scale-98 group cursor-pointer"
+                >
+                  <span>View My Work</span>
+                  <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" />
+                </a>
 
-              <button
-                onClick={onOpenResume}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl bg-dark-900/90 hover:bg-dark-850 text-slate-200 border border-slate-700/80 hover:border-slate-500 font-semibold text-sm backdrop-blur-md transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] cursor-pointer"
-              >
-                <Download className="w-4 h-4 text-accent-cyan" />
-                <span>Download Resume</span>
-              </button>
+                {/* Secondary: GitHub */}
+                <a
+                  href={personal.socials.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-dark-900 border border-slate-700/80 hover:border-slate-500 text-slate-200 hover:text-white font-semibold text-xs transition-all duration-200 active:scale-98"
+                >
+                  <GithubIcon className="w-4 h-4" />
+                  <span>GitHub</span>
+                </a>
+
+                {/* TODO: Add real /resume.pdf file to public/ directory to enable download button */}
+              </div>
+
+              {/* Subtle Focus Line Below Buttons */}
+              <p className="text-xs font-mono text-slate-400 pt-1">
+                Interested in <span className="text-cyan-400">AI Engineering</span> • <span className="text-teal-400">Data Engineering</span> • <span className="text-indigo-400">Software Development</span>
+              </p>
             </motion.div>
 
             {/* Social Links & Quick Connect */}
             <motion.div
               variants={itemVariants}
-              className="flex items-center gap-4 pt-4 border-t border-slate-800/80 w-full"
+              className="flex items-center gap-4 pt-3 border-t border-slate-800/80 w-full"
             >
               <span className="text-xs font-mono uppercase tracking-wider text-slate-400">
                 Connect:
               </span>
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-2.5">
                 <a
                   href={personal.socials.github}
                   target="_blank"
@@ -154,21 +169,11 @@ export default function Hero({ onOpenResume }) {
                 >
                   <LinkedinIcon className="w-4 h-4" />
                 </a>
-
-                {personal.email && (
-                  <a
-                    href={`mailto:${personal.email}`}
-                    className="p-2.5 rounded-xl bg-dark-900/90 border border-slate-800 text-slate-400 hover:text-white hover:border-cyan-500/40 hover:bg-slate-850 transition-all duration-200"
-                    aria-label="Send Email"
-                  >
-                    <Mail className="w-4 h-4" />
-                  </a>
-                )}
               </div>
             </motion.div>
           </motion.div>
 
-          {/* Right Column: Original AI + Data Visual Element */}
+          {/* Right Column: AI + Data Visual Element */}
           <div className="lg:col-span-5 w-full">
             <HeroVisual />
           </div>

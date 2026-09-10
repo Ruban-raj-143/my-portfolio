@@ -4,11 +4,12 @@ export const portfolioData = {
     role: "AI & Data Science Student",
     title: "AI & Data Science Student • Developer • Builder",
     statusBadge: "Open to Opportunities",
-    headline: "AI & Data Science Student\nBuilding Intelligent Digital Solutions.",
+    focus: "AI • Data • Software",
+    headline: "Building AI, Data & Software Solutions.",
     supportingText:
-      "I build AI-powered applications, data-driven solutions and software projects that solve real-world problems.",
+      "B.Tech Artificial Intelligence & Data Science student building practical AI-powered, data-driven and software solutions.",
     aboutBrief:
-      "Passionate B.Tech Artificial Intelligence and Data Science undergraduate dedicated to engineering practical machine learning systems, high-performance web applications, and insightful data architectures.",
+      "I'm Ruban Raj R, a B.Tech Artificial Intelligence and Data Science student. I enjoy building practical AI, data and software solutions and learning by turning real-world problem statements into working systems.\n\nCurrently exploring AI engineering, data engineering, LLM applications and software development.",
     location: "Tamil Nadu, India",
     email: "rubanrajr2007@gmail.com",
     academicEmail: "rubanrajr.eai24@rathinam.in",
@@ -22,9 +23,9 @@ export const portfolioData = {
 
   navLinks: [
     { name: "Home", href: "#home" },
-    { name: "About", href: "#about" },
-    { name: "Skills", href: "#skills" },
     { name: "Projects", href: "#projects" },
+    { name: "Skills", href: "#skills" },
+    { name: "About", href: "#about" },
     { name: "Achievements", href: "#achievements" },
     { name: "Education", href: "#education" },
     { name: "Contact", href: "#contact" },
@@ -35,7 +36,7 @@ export const portfolioData = {
       number: "01",
       title: "20+ Coursera Certificates",
       description:
-        "Completed 20+ online learning and certification courses across technology and related areas.",
+        "Completed 20+ online learning and certification courses across programming, artificial intelligence, and software technologies.",
       tag: "Certifications",
     },
     {
@@ -49,28 +50,28 @@ export const portfolioData = {
       number: "03",
       title: "5+ Hackathons",
       description:
-        "Participated in multiple hackathons and worked on real-world problem statements with collaborative teams.",
-      tag: "Competitive Events",
+        "Participated in 5+ hackathons and collaborated in teams to build functional prototypes for real-world challenges.",
+      tag: "Hackathons",
     },
     {
       number: "04",
       title: "3 IIT Madras Workshops",
       description:
-        "Participated in three IIT Madras workshops covering technical and security-oriented topics.",
-      tag: "Technical Workshops",
+        "Participated in 3 technical workshops hosted by IIT Madras covering applied engineering and security concepts.",
+      tag: "Workshops",
     },
   ],
 
   education: {
-    degree: "B.Tech — Artificial Intelligence and Data Science",
+    degree: "B.Tech — Artificial Intelligence & Data Science",
     institution: "Rathinam Technical Campus, Rathinam Global Deemed To Be University",
     description:
-      "Currently pursuing a B.Tech in Artificial Intelligence and Data Science, with a focus on programming, AI, data and software development.",
+      "Pursuing B.Tech in Artificial Intelligence and Data Science with immersion in core programming, machine learning, data engineering, and software development.",
     pillars: [
       "Programming Fundamentals",
       "Artificial Intelligence & Machine Learning",
       "Data Engineering & Analytics",
-      "Software Development & Systems Architecture",
+      "Software Development & Systems",
     ],
   },
 
@@ -79,21 +80,21 @@ export const portfolioData = {
       id: "github",
       name: "GitHub",
       url: "https://github.com/Ruban-raj-143",
-      description: "Explore my projects, experiments and source code.",
+      description: "Explore my projects, open-source repositories and hands-on code.",
       buttonText: "View GitHub →",
     },
     {
       id: "linkedin",
       name: "LinkedIn",
       url: "https://linkedin.com/in/ruban-raj-r-982b2234a",
-      description: "Connect with me and follow my professional journey.",
+      description: "Connect with me and follow my technical learning and project milestones.",
       buttonText: "View LinkedIn →",
     },
     {
       id: "leetcode",
       name: "LeetCode",
       url: "https://leetcode.com/u/Ruban_raj_143/",
-      description: "Practice problem solving and coding challenges.",
+      description: "Algorithmic problem solving and data structures practice.",
       buttonText: "View LeetCode →",
     },
   ],

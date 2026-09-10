@@ -107,7 +107,7 @@ export default function Contact() {
             Let's build something meaningful.
           </h2>
           <p className="mt-3 text-slate-400 max-w-2xl text-sm sm:text-base leading-relaxed">
-            Have an idea, opportunity or project in mind? I'd be happy to connect.
+            Open to internship opportunities, collaborative projects and opportunities to learn and build.
           </p>
         </motion.div>
 
@@ -127,7 +127,7 @@ export default function Contact() {
                   Let's connect.
                 </h3>
                 <p className="text-sm text-slate-300 leading-relaxed">
-                  I'm always interested in learning, building and collaborating on meaningful technology projects.
+                  Open to internships, engineering collaborations and opportunities to solve challenging problems.
                 </p>
               </div>
 

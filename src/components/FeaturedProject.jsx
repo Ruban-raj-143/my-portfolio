@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, AlertCircle, CheckCircle2 } from 'lucide-react';
 import { GithubIcon } from './SocialIcons';
 import ProjectVisual from './ProjectVisuals';
 
@@ -43,22 +43,40 @@ export default function FeaturedProject({ project, onSelect, isFullWidth = false
           <ProjectVisual type={project.visualType} isLarge={isFullWidth} />
         </div>
 
-        {/* Title & Description */}
+        {/* Title */}
         <h3
           onClick={() => onSelect(project)}
-          className="text-xl sm:text-2xl font-bold font-display text-white group-hover:text-cyan-400 transition-colors cursor-pointer mb-3"
+          className="text-xl sm:text-2xl font-bold font-display text-white group-hover:text-cyan-400 transition-colors cursor-pointer mb-4"
         >
           {project.title}
         </h3>
-        <p className="text-sm text-slate-300 leading-relaxed mb-6">
-          {project.description}
-        </p>
+
+        {/* Problem & Solution Breakdown */}
+        <div className="space-y-3 mb-6 bg-dark-950/60 rounded-xl p-4 border border-slate-800/60">
+          <div className="flex items-start gap-2.5">
+            <span className="text-[10px] font-mono uppercase font-bold text-amber-400 bg-amber-950/40 px-2 py-0.5 rounded border border-amber-800/40 shrink-0 mt-0.5">
+              PROBLEM
+            </span>
+            <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+              {project.problem}
+            </p>
+          </div>
+
+          <div className="flex items-start gap-2.5">
+            <span className="text-[10px] font-mono uppercase font-bold text-emerald-400 bg-emerald-950/40 px-2 py-0.5 rounded border border-emerald-800/40 shrink-0 mt-0.5">
+              SOLUTION
+            </span>
+            <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+              {project.solution}
+            </p>
+          </div>
+        </div>
       </div>
 
       <div>
-        {/* Technology Tags */}
-        <div className="flex flex-wrap gap-2 mb-6 pt-4 border-t border-slate-800/80">
-          {project.technologies.map((tech, idx) => (
+        {/* Technology Tags (Max 5-7 Scannable Tags) */}
+        <div className="flex flex-wrap gap-2 mb-6 pt-2 border-t border-slate-800/80">
+          {project.technologies.slice(0, 7).map((tech, idx) => (
             <span
               key={idx}
               className="px-2.5 py-1 rounded-lg bg-dark-950 text-slate-300 text-xs font-mono border border-slate-800"
@@ -74,18 +92,18 @@ export default function FeaturedProject({ project, onSelect, isFullWidth = false
             href={project.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-xs font-semibold text-slate-300 hover:text-white transition-colors p-1 rounded-lg focus:outline-none focus:ring-1 focus:ring-cyan-400"
+            className="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-300 hover:text-white transition-colors p-1 rounded-lg focus:outline-none focus:ring-1 focus:ring-cyan-400 group/gh"
             aria-label={`View ${project.title} on GitHub`}
           >
-            <GithubIcon className="w-4 h-4 text-slate-400 group-hover:text-white" />
-            <span>GitHub</span>
+            <GithubIcon className="w-4 h-4 text-slate-400 group-hover/gh:text-white" />
+            <span>View on GitHub →</span>
           </a>
 
           <button
             onClick={() => onSelect(project)}
             className="inline-flex items-center gap-1.5 text-xs font-semibold text-cyan-400 hover:text-cyan-300 transition-colors cursor-pointer group/btn"
           >
-            <span>View Project</span>
+            <span>Details</span>
             <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover/btn:translate-x-1" />
           </button>
         </div>

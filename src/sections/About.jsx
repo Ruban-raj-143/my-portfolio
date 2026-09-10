@@ -6,8 +6,8 @@ import SystemArchitectureVisual from '../components/SystemArchitectureVisual';
 
 export default function About() {
   const highlights = [
-    { value: "20+", label: "Learning Certificates" },
-    { value: "8+", label: "Hackathons & Major Events" },
+    { value: "20+", label: "Coursera Certificates" },
+    { value: "5+", label: "Hackathons" },
     { value: "3", label: "IIT Madras Workshops" },
     { value: "AI × DATA", label: "Core Focus" },
   ];
@@ -24,13 +24,13 @@ export default function About() {
       icon: <Target className="w-4 h-4 text-indigo-400" />,
     },
     {
-      label: "Learning",
-      value: "Data Engineering • Generative AI • LLM Applications",
+      label: "Exploring",
+      value: "AI Engineering • Data Engineering • LLM Apps",
       icon: <BookOpen className="w-4 h-4 text-emerald-400" />,
     },
     {
       label: "Building",
-      value: "Real-world AI-powered projects",
+      value: "Practical problem-solving systems",
       icon: <Hammer className="w-4 h-4 text-amber-400" />,
     },
   ];
@@ -76,24 +76,20 @@ export default function About() {
                 // Introduction & Background
               </div>
 
-              {/* Broken down into readable, elegant paragraphs preserving the exact text */}
+              {/* Exact recruiter-standard narrative */}
               <p className="text-base sm:text-lg font-medium text-slate-100 leading-relaxed">
-                I'm Ruban Raj R, a B.Tech Artificial Intelligence and Data Science student with a strong interest in Artificial Intelligence, Data Engineering and Software Development.
+                I'm Ruban Raj R, a B.Tech Artificial Intelligence and Data Science student. I enjoy building practical AI, data and software solutions and learning by turning real-world problem statements into working systems.
               </p>
 
               <div className="h-[1px] w-full bg-gradient-to-r from-cyan-500/30 via-slate-800 to-transparent" />
 
               <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
-                I enjoy turning ideas into practical projects and exploring how AI and data can be used to solve real-world problems.
-              </p>
-
-              <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
-                I'm continuously improving my programming, problem-solving and system-building skills through projects, hackathons and hands-on learning.
+                Currently exploring AI engineering, data engineering, LLM applications and software development.
               </p>
 
               <div className="pt-3 flex flex-wrap gap-2">
                 <span className="px-3 py-1 rounded-lg bg-dark-950 border border-slate-800/80 text-xs font-mono text-slate-400">
-                  #ArtificialIntelligence
+                  #AI
                 </span>
                 <span className="px-3 py-1 rounded-lg bg-dark-950 border border-slate-800/80 text-xs font-mono text-slate-400">
                   #DataEngineering

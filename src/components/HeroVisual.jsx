@@ -149,10 +149,10 @@ export default function HeroVisual() {
             </div>
 
             <div className="text-right">
-              <span className="text-[10px] font-mono text-slate-400 uppercase">Accuracy Rate</span>
+              <span className="text-[10px] font-mono text-slate-400 uppercase">Throughput</span>
               <div className="text-sm font-mono font-bold text-cyan-400 flex items-center justify-end gap-1">
                 <Activity className="w-3.5 h-3.5 text-cyan-400 animate-pulse" />
-                <span>{metricValue}%</span>
+                <span>1.4k req/s</span>
               </div>
             </div>
           </div>

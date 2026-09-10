@@ -44,8 +44,8 @@ This repository contains the personal portfolio of Ruban Raj R, an Artificial In
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/Ruban-raj-143/ruban-raj-portfolio.git
-   cd ruban-raj-portfolio
+   git clone https://github.com/Ruban-raj-143/my-portfolio.git
+   cd my-portfolio
    ```
 
 2. **Install dependencies:**

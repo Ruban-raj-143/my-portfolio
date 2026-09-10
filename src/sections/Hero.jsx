@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Terminal, ChevronDown } from 'lucide-react';
+import { ArrowRight, Terminal, ChevronDown, Mail } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from '../components/SocialIcons';
 import { portfolioData } from '../data/portfolioData';
 import HeroVisual from '../components/HeroVisual';
@@ -169,6 +169,16 @@ export default function Hero({ onOpenResume }) {
                 >
                   <LinkedinIcon className="w-4 h-4" />
                 </a>
+
+                {personal.email && (
+                  <a
+                    href={`mailto:${personal.email}`}
+                    className="p-2.5 rounded-xl bg-dark-900/90 border border-slate-800 text-slate-400 hover:text-white hover:border-cyan-500/40 hover:bg-slate-850 transition-all duration-200"
+                    aria-label="Send Email"
+                  >
+                    <Mail className="w-4 h-4" />
+                  </a>
+                )}
               </div>
             </motion.div>
           </motion.div>

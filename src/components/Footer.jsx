@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowUp, Mail } from 'lucide-react';
+import { ArrowUp, Mail, Phone } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from './SocialIcons';
 import { portfolioData } from '../data/portfolioData';
 
@@ -54,6 +54,15 @@ export default function Footer() {
                 aria-label="Send Email"
               >
                 <Mail className="w-4 h-4" />
+              </a>
+            )}
+            {personal.phone && (
+              <a
+                href={`tel:${personal.phone.replace(/\s+/g, '')}`}
+                className="p-2.5 rounded-xl bg-dark-900 border border-slate-800 text-slate-400 hover:text-white hover:border-cyan-500/40 transition-colors"
+                aria-label="Call Phone"
+              >
+                <Phone className="w-4 h-4" />
               </a>
             )}
           </div>

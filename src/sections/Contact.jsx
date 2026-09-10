@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { MessageSquare, ArrowRight, AlertCircle, Mail, GraduationCap, CheckCircle2, Loader2, Send } from 'lucide-react';
+import { MessageSquare, ArrowRight, AlertCircle, Mail, Phone, GraduationCap, CheckCircle2, Loader2, Send } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from '../components/SocialIcons';
 import { portfolioData } from '../data/portfolioData';
 
@@ -172,6 +172,26 @@ export default function Contact() {
                     Connect →
                   </span>
                 </a>
+
+                {personal.phone && (
+                  <a
+                    href={`tel:${personal.phone.replace(/\s+/g, '')}`}
+                    className="p-3.5 rounded-xl bg-dark-950 border border-slate-800/80 hover:border-cyan-500/40 flex items-center justify-between group transition-all duration-200"
+                  >
+                    <div className="flex items-center gap-3">
+                      <div className="w-9 h-9 rounded-lg bg-dark-900 border border-slate-800 flex items-center justify-center text-cyan-400 group-hover:text-white transition-colors">
+                        <Phone className="w-4 h-4" />
+                      </div>
+                      <div className="overflow-hidden">
+                        <p className="text-xs font-mono text-slate-400 uppercase">Phone / WhatsApp</p>
+                        <p className="text-xs sm:text-sm font-semibold text-white truncate">{personal.phone}</p>
+                      </div>
+                    </div>
+                    <span className="text-xs font-mono text-cyan-400 group-hover:translate-x-1 transition-transform shrink-0 ml-2">
+                      Call →
+                    </span>
+                  </a>
+                )}
 
                 {personal.email && (
                   <a

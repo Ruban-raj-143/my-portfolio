@@ -11,6 +11,7 @@ export const portfolioData = {
     aboutBrief:
       "I'm Ruban Raj R, a B.Tech Artificial Intelligence and Data Science student. I enjoy building practical AI, data and software solutions and learning by turning real-world problem statements into working systems.\n\nCurrently exploring AI engineering, data engineering, LLM applications and software development.",
     location: "Tamil Nadu, India",
+    phone: "+91 6369713571",
     email: "rubanrajr2007@gmail.com",
     academicEmail: "rubanrajr.eai24@rathinam.in",
     resumeUrl: "#resume",

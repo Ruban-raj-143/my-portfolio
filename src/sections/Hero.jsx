@@ -86,12 +86,15 @@ export default function Hero({ onOpenResume }) {
             </motion.div>
 
             {/* Name & Headline */}
-            <motion.div variants={itemVariants} className="space-y-2">
-              <span className="text-sm font-mono tracking-wider uppercase text-slate-400">
-                Ruban Raj R
-              </span>
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white font-display leading-[1.15]">
-                <span className="block bg-gradient-to-r from-white via-slate-100 to-slate-300 bg-clip-text text-transparent">
+            <motion.div variants={itemVariants} className="space-y-2.5">
+              <div className="flex items-center gap-2">
+                <span className="text-xs font-mono text-cyan-400 uppercase tracking-widest">// Portfolio</span>
+              </div>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight font-display leading-[1.1]">
+                <span className="block text-white">
+                  {personal.name}
+                </span>
+                <span className="block text-2xl sm:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-cyan-400 via-teal-300 to-indigo-400 bg-clip-text text-transparent mt-2 font-display">
                   {personal.headline}
                 </span>
               </h1>

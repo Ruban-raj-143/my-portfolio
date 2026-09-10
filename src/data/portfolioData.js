@@ -10,8 +10,8 @@ export const portfolioData = {
     aboutBrief:
       "Passionate B.Tech Artificial Intelligence and Data Science undergraduate dedicated to engineering practical machine learning systems, high-performance web applications, and insightful data architectures.",
     location: "Tamil Nadu, India",
-    // Email is kept as an empty placeholder until the user configures their personal mailbox
-    email: "",
+    email: "rubanrajr2007@gmail.com",
+    academicEmail: "rubanrajr.eai24@rathinam.in",
     resumeUrl: "#resume",
     socials: {
       github: "https://github.com/Ruban-raj-143",
